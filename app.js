@@ -1,2 +1,2 @@
-console.log('Este es mi primer archivo!');
+const nombre = 'Ignacio';
 console.log('Este es mi segundo commit!');
