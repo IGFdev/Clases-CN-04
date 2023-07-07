@@ -1,0 +1,38 @@
+.register-form,
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+
+.input-group p{
+    color: red;
+    font-size: 10px;
+}
+
+/* Un pseudoselector, nos sirve para indicar los estilos de los elementos en sus diferentes estados */
+.input-group input:focus {
+    background-color: aquamarine;
+    border: 1px solid red;
+}
+
+input:hover, button:hover {
+    background-color: whitesmoke;
+}
+
+.register-form input,
+.register-form button {
+    width: 25%;
+}
+
+a:visited {
+    color: red;
+}

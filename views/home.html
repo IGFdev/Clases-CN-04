@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Formularios</title>
+</head>
+<body>
+    <a href="https://www.google.com.ar">Google</a>
+
+    <form method="get" action="/registrar" class="register-form">
+        <div class="input-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="nombre" placeholder="Ejemplo" required>
+            <p>Este campo es obligatorio</p>
+        </div>
+        
+        <div class="input-group">
+            <label for="">Edad</label>
+            <input type="number" step="0.5" max="5" min="1" placeholder="123" required>
+            <p>Este campo es obligatorio</p>
+        </div>
+        
+        <div class="input-group">
+            <label for="">Color favorito</label>
+            <input type="color" value="#sadf77" required>
+            <p>Este campo es obligatorio</p>
+        </div>
+        
+        <div class="input-group">
+            <label for="">Mantener sesión iniciada</label>
+            <input type="checkbox" name="recordar">
+        </div>
+
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        
+        <input type="submit" value="Registarme!">
+        <button type="button">Soy un botón</button>
+    </form>
+</body>
+</html>
