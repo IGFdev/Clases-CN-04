@@ -8,8 +8,8 @@ const userRouter = require ('./routes/userRouter');
 
 app.listen (port, () => console.log(`Servidor funcionando bien en puerto ${port}`));
 
-app.use('/', mainRouter)
-app.use('/user', userRouter)
+app.use('/', mainRouter);
+app.use('/user', userRouter);
 
 /*
 
