@@ -1,1 +1,94 @@
-[{"id":1,"title":"Licuadora","price":1234},{"id":2,"title":"Laptop","price":1234},{"id":4,"title":"Tostadora","price":1234},{"id":5,"title":"Cama","price":123},{"id":6,"title":"Prueba 2","price":"123"},{"id":7,"title":"Prueba 3","price":"9999"},{"id":8,"title":"asdf","price":"123"},{"id":9,"title":"ASD","price":"123"},{"id":10,"title":"ASD","price":"123"},{"id":11,"title":"Ian","price":"123"},{"id":12,"title":"Probando","price":"123","talle":"5"}]
+[
+    {
+        "id": 1,
+        "title": "Licuadora",
+        "price": 1234
+    },
+    {
+        "id": 2,
+        "title": "Laptop",
+        "price": 1234
+    },
+    {
+        "id": 5,
+        "title": "Cama",
+        "price": 123
+    },
+    {
+        "id": 6,
+        "title": "Prueba 2",
+        "price": "123"
+    },
+    {
+        "id": 8,
+        "title": "asdf",
+        "price": "123"
+    },
+    {
+        "id": 9,
+        "title": "ASD",
+        "price": "123"
+    },
+    {
+        "id": 10,
+        "title": "Tostadora!!!!!!",
+        "price": "1234444"
+    },
+    {
+        "id": 12,
+        "title": "Probando",
+        "price": "123"
+    },
+    {
+        "id": 13,
+        "title": "Heladera!!!",
+        "price": "123"
+    },
+    {
+        "id": 14,
+        "title": "Heladera!!!",
+        "price": "123"
+    },
+    {
+        "id": 15,
+        "title": "Heladera!!!",
+        "price": "123",
+        "img": "1691112769923-img-tv-samsung-smart.jpg"
+    },
+    {
+        "id": 16,
+        "title": "Heladera!!!",
+        "price": "123",
+        "img": "1691112980081-img-tv-samsung-smart.jpg"
+    },
+    {
+        "id": 17,
+        "title": "Cafetera Moulinex",
+        "price": "123",
+        "img": "1691113008477-img-cafetera-moulinex.jpg"
+    },
+    {
+        "id": 18,
+        "title": "",
+        "price": "",
+        "img": "1691113192115-img-home-banner.jpg"
+    },
+    {
+        "id": 19,
+        "title": "asdf",
+        "price": "123",
+        "img": "1691113327798-img-cafetera-moulinex.jpg"
+    },
+    {
+        "id": 20,
+        "title": "asdf",
+        "price": "123",
+        "img": [
+            "1691113398861-img-cafetera-moulinex.jpg",
+            "1691113398864-img-home-banner.jpg",
+            "1691113398875-img-macbook-pro-2019.jpg",
+            "1691113398892-img-samsung-galaxy-s10.jpg",
+            "1691113398893-img-tv-samsung-smart.jpg"
+        ]
+    }
+]

@@ -10,7 +10,7 @@ const controller = {
     getDetail: (req, res) => {
         const productId = req.params.id;
 
-        const selectedProduct =  productModel.findById(productId);
+        const selectedProduct = productModel.findById(productId);
 
         res.render('productDetail', { product: selectedProduct });
     },
@@ -20,12 +20,16 @@ const controller = {
     },
 
     postProduct: (req, res) => {
-        console.log(req.body);
+        console.log(req.files);
+
+        const filenames = req.files.map(file => file.filename);
+
+        console.log(filenames)
 
         const newProduct = {
             title: req.body.title,
             price: req.body.price,
-            talle: req.body.talle,
+            img: filenames
         }
 
         const createdProduct = productModel.createProduct(newProduct);
@@ -34,6 +38,38 @@ const controller = {
 
         // Desde los POST no renderizamos vistas, solo redireccionamos
         //res.redirect('/products');
+    },
+
+    getEdit: (req, res) => {
+        const product = productModel.findById(Number(req.params.id));
+
+        res.render('editProduct', { product });
+    },
+
+    deleteProduct: (req, res) => {
+        productModel.destroy(Number(req.params.id));
+
+        res.redirect('/products');
+    },
+
+    updateProduct: (req, res) => {
+        let updatedProduct = {
+            id: Number(req.params.id)
+        };
+
+        updatedProduct = {
+            ...updatedProduct,
+            ...req.body
+        };
+
+        /* 
+            const updatedProduct = req.body;
+            updatedProduct.id = Number(req.params.id); 
+        */
+
+        productModel.updateProduct(updatedProduct);
+
+        res.redirect('/products/' + updatedProduct.id + '/detail');
     }
 }
 
