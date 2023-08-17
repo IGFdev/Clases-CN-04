@@ -4,6 +4,7 @@ const path = require('path');
 const modelo = {
     fileRoute: path.join(__dirname, '../data/products.json'),
 
+    // Read all
     findAll: () => {
         // Buscamos el contenido del archivo JSON
         const jsonData = fs.readFileSync(modelo.fileRoute, 'utf-8');
@@ -13,7 +14,9 @@ const modelo = {
         return products;
     },
 
+    // Read one
     findById: (id) => {
+        // Obtenemos todos los productos
         const products = modelo.findAll();
 
         const selectedProduct = products.find(productoActual => productoActual.id == id);
@@ -21,6 +24,7 @@ const modelo = {
         return selectedProduct;
     },
 
+    // Create one
     createProduct: (bodyData) => {
         let products = modelo.findAll();
 
@@ -41,16 +45,21 @@ const modelo = {
         return newProduct;
     },
 
+    // Delete
     destroy: (id) => {
         let products = modelo.findAll();
 
+        // Filtramos el producto de ID seleccionado
         products = products.filter(productoActual => productoActual.id !== id);
+
+        console.log(products);
 
         const jsonProducts = JSON.stringify(products);
 
         fs.writeFileSync(modelo.fileRoute, jsonProducts, 'utf-8');
     },
 
+    // Edit
     updateProduct: (updatedProduct) => {
         // Buscar array de productos ya existentes
         let products = modelo.findAll();
@@ -64,5 +73,6 @@ const modelo = {
         fs.writeFileSync(modelo.fileRoute, productsJson, 'utf-8');
     }
 };
+
 
 module.exports = modelo;

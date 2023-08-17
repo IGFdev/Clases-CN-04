@@ -10,14 +10,9 @@
         "price": 1234
     },
     {
-        "id": 5,
-        "title": "Cama",
-        "price": 123
-    },
-    {
         "id": 6,
-        "title": "Prueba 2",
-        "price": "123"
+        "title": "Prueba 1|23123123",
+        "price": "9999"
     },
     {
         "id": 8,
@@ -90,5 +85,17 @@
             "1691113398892-img-samsung-galaxy-s10.jpg",
             "1691113398893-img-tv-samsung-smart.jpg"
         ]
+    },
+    {
+        "id": 21,
+        "title": "Nuevo producto",
+        "price": 123,
+        "img": "producto.jpg"
+    },
+    {
+        "id": 22,
+        "title": "Nuevo producto2",
+        "price": 1234,
+        "img": "producto2.jpg"
     }
 ]

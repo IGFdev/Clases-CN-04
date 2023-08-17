@@ -2,16 +2,14 @@ const express = require('express');
 const router = express.Router();
 const userController = require ('../controllers/userController');
 
-router.get('/login', userController.login);
-router.get('/register', userController.register);
+// @GET - /users/register
+router.get('/register', userController.getRegister);
+// @POST - /users/register
+router.post('/register', userController.register);
 
-// /profile/15/detail?edad=17&nombre=asdfasdf
-router.get('/profile/:id/products', userController.profile);
-
-router.get('/profile/detail', (req, res) => {
-    res.send('asdfasdf')
-})
-
-
+// @GET - /users/login
+router.get('/login', userController.getLogin);
+// @POST - /users/login
+router.post('/login', userController.login);
 
 module.exports = router;

@@ -1,8 +1,8 @@
-const path = require('path')
+const path = require('path');
 
 const controller = {
     home: (req, res) => {
-        res.sendFile(path.resolve(__dirname, '../views/home.html'))
+        res.render('home', { user: req.session.user });
     }
 }
 
