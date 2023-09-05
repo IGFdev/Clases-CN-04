@@ -5,6 +5,8 @@ const port = process.env.PORT || 3000;
 const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
+const jugadorRouter = require('./routes/jugadorRouter');
+const clubRouter = require('./routes/clubRouter');
 const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -45,6 +47,8 @@ app.use((req, res, next) => {
 app.use('/', mainRouter);
 app.use('/users', userRouter);
 app.use('/products', productRouter);
+app.use('/jugadores', jugadorRouter);
+app.use('/clubes', clubRouter);
 
 app.use((req, res) => {
     res.render('404');
