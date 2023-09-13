@@ -10,10 +10,18 @@ module.exports = {
     },
     getDetail: async (req, res) => {
         try {
-            const jugador = await Jugador.findByPk(req.params.id, { raw: true });
-    
-            res.render('jugadorDetail', { jugador });
-            
+            const jugador = await Jugador.findByPk(req.params.id, {
+                raw: true,
+                include: 'club',
+                nest: true
+            });
+
+            console.log(jugador.club.name);
+
+            res.send(jugador)
+
+            //res.render('jugadorDetail', { jugador });
+
         } catch (error) {
             console.log(error);
         }

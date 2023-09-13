@@ -9,10 +9,11 @@ module.exports = {
         res.send('Listado de clubes');
     },
     getDetail: async (req, res) => {
-        const club = await Club.findByPk(req.params.id, { raw: true });
+        const club = await Club.findByPk(req.params.id, {
+            include: ['jugadores', 'sponsores'],
+            nest: true
+        });
 
-        console.log(club);
-
-        res.send('Detalle del club');
+        res.send(club);
     },
 }

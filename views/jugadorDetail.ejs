@@ -9,10 +9,14 @@
 <body>
     <h1>Detalles del jugador <%= jugador.id %></h1>
     <h2>Nombre: <%= jugador.first_name %> <%= jugador.last_name %></h2>
-    <h3>Club id: <%= jugador.club_id %></h3>
+    <h3>Club: <%= jugador.club.name %></h3>
+
+    <img src="/images/clubes/<%= jugador.club.img %>" width="250px" alt="" srcset="">
+
     <a href="/jugadores/<%= jugador.id %>/edit">
         <button>Editar jugador</button>
     </a>
+    
     <form action="/jugadores/<%= jugador.id %>/delete?_method=delete" method="post">
         <input type="submit" value="Eliminar jugador">
     </form>

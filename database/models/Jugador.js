@@ -17,7 +17,11 @@ module.exports = (sequelize, DataTypes) => {
         },
         club_id: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: false,
+            references: {
+                model: 'clubes',
+                key: 'id'
+            }
         },
     }
 
@@ -27,6 +31,14 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const Jugador = sequelize.define(alias, cols, config);
+
+    Jugador.associate = (models) => {
+        Jugador.belongsTo(models.Club, {
+            as: 'club',
+            timestamps: false,
+            foreignKey: 'club_id'
+        });
+    }
 
     return Jugador;
 }
