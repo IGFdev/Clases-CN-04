@@ -48,7 +48,6 @@ module.exports = {
         try {
             const newPlayer = await Jugador.create(nuevoJugador);
 
-            console.log(newPlayer);
             return res.redirect('/jugadores/' + newPlayer.dataValues.id + '/detail')
         } catch (error) {
             console.log(error);

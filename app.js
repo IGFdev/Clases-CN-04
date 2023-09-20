@@ -1,15 +1,19 @@
 const express = require('express');
 const methodOverride = require('method-override');
+const path = require('path');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv').config();
-const port = process.env.PORT || 3000;
+
 const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
 const productRouter = require('./routes/productRouter');
 const jugadorRouter = require('./routes/jugadorRouter');
 const clubRouter = require('./routes/clubRouter');
-const path = require('path');
-const session = require('express-session');
-const cookieParser = require('cookie-parser');
+const postsRouter = require('./routes/postsRouter');
+const apiClubRouter = require('./routes/api/apiClubRouter');
+
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -49,6 +53,8 @@ app.use('/users', userRouter);
 app.use('/products', productRouter);
 app.use('/jugadores', jugadorRouter);
 app.use('/clubes', clubRouter);
+app.use('/posts', postsRouter)
+app.use('/api/clubes', apiClubRouter);
 
 app.use((req, res) => {
     res.render('404');
