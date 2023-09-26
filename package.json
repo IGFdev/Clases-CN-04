@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "node app.js",
-    "start": "npx nodemon app.js"
+    "test": "npx nodemon app.js",
+    "start": "node app.js"
   },
   "author": "",
   "license": "ISC",

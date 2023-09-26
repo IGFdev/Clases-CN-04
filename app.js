@@ -60,7 +60,7 @@ app.use((req, res) => {
     res.render('404');
 });
 
-app.listen(port, () => console.log(`Servidor funcionando bien en puerto ${port}`));
+app.listen(port, () => console.log(`Servidor escuchando en puerto ${port} || http://localhost:${port}`));
 
 /* 
     - User ID con UUID
