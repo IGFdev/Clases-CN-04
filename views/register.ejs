@@ -8,10 +8,15 @@
 <body>
     <h1>Regístrate!</h1>
     <p style="color: red;"><%= error %></p>
-    <form action="/users/register" method="post">
-        <input type="email" name="email" placeholder="email">
-        <input type="password" name="password" placeholder="password">
+    <h3 id="pw-security">la contraseña es: </h3>
+
+    <form id="register-form" action="/users/register" method="post">
+        <input type="email" id="email" name="email" placeholder="email">
+        <input id="password" type="password" name="password" placeholder="password">
+        <input type="checkbox" id="ver-pw">
         <input type="submit">
     </form>
+
+    <script src="/js/registerValidations.js"></script>
 </body>
 </html>
