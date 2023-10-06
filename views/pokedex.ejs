@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <style>
+        .pokemon {
+            padding: 2%; 
+            margin: 2%; 
+            list-style-type: none;
+            border: 1px solid black;
+            border-radius: 12px;
+            transition: 300ms;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+        }
+
+        .pokemon:hover {
+            box-shadow: 8px 10px 26px 4px rgba(174,255,178,0.75);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Esta es la Nachodex</h1>
+        <input type="text" id="buscador">
+
+    </div>
+    <ul style="display: flex; flex-wrap: wrap;" id="pokemon-list"></ul>
+
+    <script src="/js/pokedex.js"></script>
+</body>
+</html>

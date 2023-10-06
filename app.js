@@ -56,6 +56,8 @@ app.use('/clubes', clubRouter);
 app.use('/posts', postsRouter)
 app.use('/api/clubes', apiClubRouter);
 
+app.get('/pokedex', (req, res) => res.render('pokedex'));
+
 app.use((req, res) => {
     res.render('404');
 });
