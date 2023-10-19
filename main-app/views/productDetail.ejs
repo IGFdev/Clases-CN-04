@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+    <h1>Estás viendo el detalle del producto <%= product.id %></h1>
+    <article>
+      <h1><%= product.title %></h1>
+      <h3>$<%= product.price %></h3>
+
+      <% product.img.forEach(filename => { %>
+        <img width="500px" src="/images/products/<%= filename %>" alt="">
+      <% }) %>
+
+
+      <a href="/products/<%= product.id %>/edit">
+        <button>Editar producto</button>
+      </a>
+
+      <form action="/products/<%= product.id %>/delete?_method=DELETE" method="post">
+        <input type="submit" value="Eliminar producto">
+      </form>
+    </article>
+</body>
+
+</html>

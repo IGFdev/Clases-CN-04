@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% posts.forEach(post => { %>
+        <article>
+            <h1><%= post.title %></h1>
+            <p><%= post.body %></p>
+            <a href="/posts/<%= post.id %>/detail">
+                <button>Ver detalle</button>
+            </a>
+        </article>
+        <br>
+    <% }) %>
+</body>
+</html>

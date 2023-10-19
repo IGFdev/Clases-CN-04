@@ -1,0 +1,33 @@
+[
+    {
+        "id": "815b3abd-bbdc-4818-ad0f-70edb4d09d64",
+        "email": "asdf@asdf.com",
+        "password": "monito123"
+    },
+    {
+        "id": "c6224a46-6ea4-458d-80fa-15025465cbab",
+        "email": "asdf123123@asdf.com",
+        "password": "asdfasdf"
+    },
+    {
+        "id": "3d49d7ae-ee39-4622-826e-59c82bf7daa9",
+        "email": "asdfasdfasdf@asdfasd.com",
+        "password": "123"
+    },
+    {
+        "id": "04de7699-793f-4277-a582-3ef8d172d229",
+        "email": "pepito@gmail.com",
+        "password": "$2b$12$BkNFPt.e21ah9gozimp3UOQc4SK6etpnF18O9.YA6skn12T/Rh6fK"
+    },
+    {
+        "id": "cc043bba-e33d-4e09-8269-35f448fe7ba2",
+        "email": "pepito123@gmail.com",
+        "password": "$2b$12$MicE0LFk6NB8nAXxNDXoN.UYq7jTmfcUVwJZ1owhzJ9BsypC4M8oS"
+    },
+    {
+        "id": "e35d4352-3b80-47fb-8285-8ee9482d28f5",
+        "email": "pepita@gmail.com",
+        "username": "Pepita",
+        "password": "$2b$12$e3BLVVKV2wiwtyvr/nUfY.PJLAa98AbxOxGbMnjTJkOaR2fD80yGa"
+    }
+]

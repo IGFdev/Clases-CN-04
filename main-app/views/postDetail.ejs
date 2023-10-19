@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= post.title %></h1>
+    <p><%= post.body %></p>
+    <br><br>
+
+    <% comments.forEach((comment, index) => { %>
+        <div class="comment">
+            <img src="<%= users.results[index].picture.large %>" style="border-radius: 50%;" alt="">
+            <h3>Comment by: <%= comment.email %></h3>
+            <p><%= comment.body %></p>
+        </div>
+    <% }) %>
+</body>
+</html>
