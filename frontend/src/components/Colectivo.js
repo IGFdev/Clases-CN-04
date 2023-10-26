@@ -6,11 +6,15 @@ const Colectivo = () => {
 
     return (
         <div>
-            <Asiento />
-            <Asiento />
-            <Asiento />
-            <br />
-            <br />
+            <Asiento
+                numero={1}
+            />
+            <Asiento
+                numero={2}
+            />
+            <Asiento
+                numero={3}
+            />
         </div>
     );
 }

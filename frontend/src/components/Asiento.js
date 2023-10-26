@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Asiento = () => {
+const Asiento = (props) => {
+
     return (
-        <p>Esto es un asiento</p>
+        <p>Este es el asiento N°{props.numero}</p>
     );
 }
 

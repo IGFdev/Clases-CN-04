@@ -1,0 +1,15 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    color: red;
+}
+
+.user-card {
+    border: 1px solid black;
+    width: 30%;
+    padding: 20px;
+    margin: 15px;
+}
