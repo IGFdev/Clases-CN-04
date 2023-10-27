@@ -1,7 +1,27 @@
-import React from 'react'; // const React = require('react');
-import Asiento from './Asiento'; // const Asiento = require('./Asiento')
+import React, { Component } from 'react';
+import Asiento from './Asiento';
 
-const Colectivo = () => {
+class Colectivo extends Component {
+    render() {
+        return (
+            <div>
+                <Asiento
+                    numero={1}
+                />
+                <Asiento
+                    numero={2}
+                />
+                <Asiento
+                    numero={3}
+                />
+            </div>
+        )
+    }
+}
+
+export default Colectivo;
+
+/* const Colectivo = () => {
     console.log('Esto es un log de colectivo')
 
     return (
@@ -19,4 +39,4 @@ const Colectivo = () => {
     );
 }
 
-export default Colectivo;
+export default Colectivo; */
