@@ -32,8 +32,6 @@ class Contador extends Component {
         2- Cuando su state cambie
     */
 
-
-
     render() {
         return (
             <>
