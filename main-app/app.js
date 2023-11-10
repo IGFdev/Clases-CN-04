@@ -4,6 +4,7 @@ const path = require('path');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv').config();
+const cors = require('cors');
 
 const mainRouter = require('./routes/mainRouter');
 const userRouter = require('./routes/userRouter');
@@ -28,12 +29,13 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 app.use(methodOverride('_method'));
 
 app.use((req, res, next) => {
     // Si hay una cookie guardada con el email de un usuario
-    if(req.cookies.email){
+    if (req.cookies.email) {
         const userModel = require('./models/userModels');
 
         // Mediante el modelo vamos a buscar los datos del usuario

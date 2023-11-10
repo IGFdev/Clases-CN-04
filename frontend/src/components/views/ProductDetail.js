@@ -18,7 +18,7 @@ function ProductDetail(props) {
 
 
     const prodId = Number(props.match.params.id);
-    const product = products.find(currentProduct => currentProduct.id === prodId);
+    const product = products.forEach(currentProduct => currentProduct.id === prodId);
 
 
     return (
