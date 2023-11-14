@@ -5,13 +5,9 @@ const session = require('express-session');
 const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv').config();
 
-const mainRouter = require('./routes/mainRouter');
-const userRouter = require('./routes/userRouter');
-const productRouter = require('./routes/productRouter');
-const jugadorRouter = require('./routes/jugadorRouter');
-const clubRouter = require('./routes/clubRouter');
-const postsRouter = require('./routes/postsRouter');
-const apiClubRouter = require('./routes/api/apiClubRouter');
+const routes = require('./routes');
+
+const db = require('./database/models');
 
 const port = process.env.PORT || 3000;
 
@@ -33,7 +29,7 @@ app.use(methodOverride('_method'));
 
 app.use((req, res, next) => {
     // Si hay una cookie guardada con el email de un usuario
-    if(req.cookies.email){
+    if (req.cookies.email) {
         const userModel = require('./models/userModels');
 
         // Mediante el modelo vamos a buscar los datos del usuario
@@ -48,25 +44,16 @@ app.use((req, res, next) => {
 
 // Para cerrar sesión: res.clearCookie('email');
 
-app.use('/', mainRouter);
-app.use('/users', userRouter);
-app.use('/products', productRouter);
-app.use('/jugadores', jugadorRouter);
-app.use('/clubes', clubRouter);
-app.use('/posts', postsRouter)
-app.use('/api/clubes', apiClubRouter);
+app.use('/', routes.mainRouter);
+app.use('/users', routes.userRouter);
+app.use('/products', routes.productRouter);
+app.use('/jugadores', routes.jugadorRouter);
+app.use('/clubes', routes.clubRouter);
+app.use('/posts', routes.postsRouter)
+app.use('/api/clubes', routes.apiClubRouter);
 
 app.use((req, res) => {
     res.render('404');
 });
 
 app.listen(port, () => console.log(`Servidor escuchando en puerto ${port} || http://localhost:${port}`));
-
-/* 
-    - User ID con UUID
-    - Hash de pw con bcrypt
-    - Inicio de sesión con bcrypt
-    - Buscar usuario por email
-    - Mantener sesión iniciada en session
-    - Guardar email de usuario en cookie
-*/

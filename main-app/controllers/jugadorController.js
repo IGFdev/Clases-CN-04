@@ -1,4 +1,5 @@
 const { Jugador, Club } = require('../database/models');
+const jugadorServices = require('../services/jugadorServices');
 
 module.exports = {
     getAll: async (req, res) => {
@@ -46,7 +47,7 @@ module.exports = {
         };
 
         try {
-            const newPlayer = await Jugador.create(nuevoJugador);
+            const newPlayer = jugadorServices.createOne(nuevoJugador);
 
             return res.redirect('/jugadores/' + newPlayer.dataValues.id + '/detail')
         } catch (error) {
