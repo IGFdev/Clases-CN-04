@@ -1,0 +1,15 @@
+FROM node:18-alpine             pull in node image
+
+RUN npm i -g nodemon
+
+WORKDIR /app                    specify working directory
+
+COPY package.json .             copy package.json so that we can run the npm i command before copying all source files
+
+RUN npm install                 
+
+COPY . .                        copy source files to the workdir
+
+EXPOSE 4000                     exposing the port
+
+CMD [ "npm", "run", "dev" ]     setting up command to start node image
