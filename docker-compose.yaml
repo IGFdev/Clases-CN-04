@@ -4,11 +4,7 @@ services:
     build: ./api
     container_name: api_c
     ports:
-      - '4000:4000'
-    volumes:
-      - ./api:/app
-      - /app/node_modules
-      
+      - '4000:4000'      
   front:
     build: ./myblog
     container_name: front_c

@@ -6,23 +6,22 @@ const app = express()
 app.use(cors())
 
 app.get('/', (req, res) => {
-  console.log('Pau te amo');
   res.json([
     {
       "id":"1",
-      "title":"Pau está god"
+      "name":"Rocío"
     },
     {
       "id":"2",
-      "title":"Game Review: Pokemon Brillian Diamond"
+      "name":"Martín"
     },
     {
       "id":"3",
-      "title":"Show Review: Alice in Borderland"
+      "name":"Nacho"
     }
   ])
 })
 
-app.listen(4000, () => {
-  console.log('listening for requests on port 4000');
+app.listen(3000, () => {
+  console.log('listening for requests on port 3000');
 })

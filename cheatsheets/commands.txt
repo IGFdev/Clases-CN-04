@@ -43,4 +43,3 @@
 - Delete container
     docker container rm myapp_c1
     docker container rm myapp_c2 myapp_c3
-
